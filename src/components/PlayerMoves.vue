@@ -1,18 +1,21 @@
 <template>
   <div class="player-moves-container">
     <button
+      name="rock"
       class="button-primary move-button"
       @click="$emit('move', EMove.Rock)"
     >
       Rock
     </button>
     <button
+      name="paper"
       class="button-primary move-button"
       @click="$emit('move', EMove.Paper)"
     >
       Paper
     </button>
     <button
+      name="scissors"
       class="button-primary move-button"
       @click="$emit('move', EMove.Scissors)"
     >

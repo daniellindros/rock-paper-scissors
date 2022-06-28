@@ -1,18 +1,13 @@
 <template>
-  <h5 class="text">Make your move, {{ currentPlayer.name }}!</h5>
+  <h5 class="center-text">Make your move, {{ currentPlayer.name }}!</h5>
   <PlayerMoves @move="handleMove" />
 </template>
 
 <script setup lang="ts">
-import CardContainer from '@/components/CardContainer.vue';
 import PlayerMoves from '@/components/PlayerMoves.vue';
-import PlayerScore from '@/components/PlayerScore.vue';
-import { doMove, getGame } from '@/services/game';
-import type { IGame } from '@/types/game';
 import type { IPlayer } from '@/types/player';
 import type { EMove, IPlayerMove } from '@/types/move';
 import type { IRound } from '@/types/round';
-import { onMounted, reactive, ref } from 'vue';
 import { computed } from 'vue';
 
 const props = defineProps<{
@@ -37,7 +32,7 @@ const currentPlayer = computed((): IPlayer => {
 });
 </script>
 <style scoped>
-.text {
+.center-text {
   text-align: center;
 }
 </style>

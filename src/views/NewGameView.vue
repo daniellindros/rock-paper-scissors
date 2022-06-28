@@ -24,8 +24,9 @@
           </div>
         </div>
       </template>
-      <template v-slot:footer>
+      <template v-slot:buttons>
         <button
+          name="start-game"
           :class="['full-width', { disabled: !canProceed }]"
           :disabled="!canProceed"
           @click="handleStartGame"

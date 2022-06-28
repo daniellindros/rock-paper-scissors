@@ -12,8 +12,8 @@
     </div>
   </div>
   <div class="row footer">
-    <div class="twelve columns">
-      <slot name="footer" />
+    <div class="twelve columns button-container">
+      <slot name="buttons" />
     </div>
   </div>
 </template>
@@ -26,5 +26,14 @@ import CardContainer from '@/components/CardContainer.vue';
 }
 .content {
   margin-bottom: 2rem;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+@media (max-width: 550px) {
+  .button-container {
+    flex-direction: column;
+  }
 }
 </style>

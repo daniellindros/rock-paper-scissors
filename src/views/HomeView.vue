@@ -5,10 +5,10 @@
       <p class="center-text">Press "New Game" to start playing...</p>
     </template>
 
-    <template v-slot:footer>
-      <div class="button-container">
-        <button class="full-width" @click="handleNewGame">New Game</button>
-      </div>
+    <template v-slot:buttons>
+      <button name="new-game" class="full-width" @click="handleNewGame">
+        New Game
+      </button>
     </template>
   </DefaultLayout>
 </template>
@@ -24,14 +24,5 @@ const handleNewGame = () => router.push({ name: 'newGame' });
 <style scoped>
 .center-text {
   text-align: center;
-}
-.button-container {
-  display: flex;
-  justify-content: space-between;
-}
-@media (max-width: 550px) {
-  .button-container {
-    flex-direction: column;
-  }
 }
 </style>

@@ -9,8 +9,6 @@
   </div>
 </template>
 <script setup lang="ts">
-import CardContainer from '@/components/CardContainer.vue';
-
 defineProps<{
   name: string;
   score: number;
