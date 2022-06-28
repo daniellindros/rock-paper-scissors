@@ -89,9 +89,7 @@ watch(
 
 const handleMove = async (move: IPlayerMove) => {
   await doMove(game.id, move);
-  setTimeout(() => {
-    updateGame();
-  }, 1000);
+  updateGame();
 };
 
 const updateGame = async () => {
